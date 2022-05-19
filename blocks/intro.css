@@ -1,0 +1,61 @@
+.intro {
+  font-family: "Inter", Arial, sans-serif;
+  padding: 46px 0 70px;
+  margin: 0 auto;
+}
+
+.intro__title {
+  margin: 0 0 40px;
+  max-width: 800px;
+}
+
+.intro__text {
+  max-width: 720px;
+  font-size: 16px;
+  line-height: 26px;
+  margin: 32px 0 0;
+}
+
+.intro__subtitle {
+  max-width: 720px;
+  font-size: 24px;
+  line-height: 34px;
+  margin: 40px 0 0;
+}
+
+.intro__signature {
+  max-width: 720px;
+  font-size: 24px;
+  line-height: 34px;
+  text-align: right;
+  margin: 10px 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .intro {
+    padding: 44px 24px 44px;
+  }
+}
+
+@media screen and (max-width: 984px) {
+  .intro__text {
+    max-width: none;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .intro {
+    padding: 18px 16px 44px;
+  }
+
+  .intro__title {
+    font-size: 32px;
+    line-height: 35px;
+  }
+}
+
+@media screen and (max-width: 544px) {
+  .intro__subtitle {
+    line-height: 30px;
+  }
+}

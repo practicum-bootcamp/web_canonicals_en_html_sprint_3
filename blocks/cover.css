@@ -1,0 +1,120 @@
+.cover {
+  font-family: "Inter", Arial, sans-serif;
+  padding: 46px 48px;
+  margin: 0 auto;
+}
+
+.cover__title {
+  text-align: center;
+  margin: 0 0 16px;
+}
+
+.cover__subtitle {
+  max-width: 230px;
+  /* Students are free in their choice of implementation here. Per design, the frame takes the full width of the block. */
+  /* Could be improved: non-breaking spaces. */
+  text-align: center;
+  font-size: 18px;
+  line-height: 22px;
+  margin: 16px 0 0;
+}
+
+.cover__item {
+  min-height: 740px;
+  color: #fff;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-image: url("../images/__background.jpg");
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  /* Add padding in case of content overflow. */
+}
+
+.cover__button {
+  background: #0278fe;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  margin: 32px 0 0;
+  padding: 13px 20px;
+}
+
+.cover__button:hover {
+  background: #0063d2;
+}
+
+.cover__item::before {
+  /* Could be improved: use a pseudo-element. Originally, it's a div inside `cover__item` */
+  content: "";
+  background: #2a2c2f;
+  opacity: 0.3;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: 0.3s;
+  /* Could be improved: use `transition` */
+  z-index: -1;
+  /* z-index should be applied to the overlay, not the heading or subheading. */
+}
+
+.cover__item:hover::before {
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 1024px) {
+  .cover {
+    padding: 44px 0 46px;
+  }
+
+  .cover__title {
+    font-size: 72px;
+    line-height: 76px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .cover {
+    padding: 32px 0 6px;
+  }
+
+  .cover__title {
+    font-size: 32px;
+    line-height: 35px;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .cover__subtitle {
+    max-width: 170px;
+    font-size: 14px;
+    line-height: 16px;
+    margin: 16px 0 0;
+  }
+
+  .cover__item {
+    min-height: 254px;
+    padding: 50px 16px;
+  }
+
+  .cover__button {
+    margin: 16px 0 0;
+  }
+}

@@ -1,0 +1,9 @@
+.section {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.section_size_narrow {
+  max-width: 984px;
+  padding: 0;
+}
